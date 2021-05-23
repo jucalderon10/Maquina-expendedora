@@ -1,0 +1,43 @@
+.titulo{
+    border: blueviolet 2px solid;
+}
+
+.contenido{
+    display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 30px;
+  background-color: pink;
+  padding: 10px;
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    background-color: pink;
+    padding: 10px;
+    border: blueviolet 2px solid;
+    padding: 10px;
+}
+
+.chocolatina{
+    border: blue 2px solid;
+}
+
+.coca{
+    border: blue 2px solid;
+}
+
+.mani{
+    border: blue 2px solid;
+}
+
+.margarita{
+    border: blue 2px solid;
+}
+
+.digitos{
+    border: blueviolet 2px solid;
+    padding: 10px;
+}
