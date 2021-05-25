@@ -1,43 +1,72 @@
 .titulo{
-    border: blueviolet 2px solid;
+    text-align: center;
+    padding: 10px;
+    background-image: url("https://img.freepik.com/foto-gratis/fondo-textura-acuarela-purpura-rosa_1083-169.jpg?size=626&ext=jpg");
+}
+
+h1{
+    font: oblique bold 120% cursive;
+    font-size: 50px;
 }
 
 .contenido{
     display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 700px auto;
   grid-column-gap: 30px;
-  background-color: pink;
   padding: 10px;
 }
 
 .productos{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 350px 350px;
     grid-row-gap: 5px;
     grid-column-gap: 5px;
-    background-color: pink;
+    background-color: #ABB2B9;
     padding: 10px;
-    border: blueviolet 2px solid;
-    padding: 10px;
+    border-radius: 5px;
+    
 }
 
 .chocolatina{
-    border: blue 2px solid;
+    max-width: 320px;
+    padding: 10px;
+    
 }
 
+.example-card {
+    max-width: 320px;
+  }
+
 .coca{
-    border: blue 2px solid;
+    max-width: 320px;
+    padding: 10px;
 }
 
 .mani{
-    border: blue 2px solid;
+    max-width: 320px;
+    padding: 10px;
 }
 
 .margarita{
-    border: blue 2px solid;
+    max-width: 320px;
+    padding: 10px;
 }
 
 .digitos{
-    border: blueviolet 2px solid;
     padding: 10px;
+    background-color: #ABB2B9;
+    border-radius: 5px;
+    border: blueviolet solid 2px;
+}
+
+.p-inputgroup{
+    max-width: 300px;
+}
+
+.operaciones{
+    border: blueviolet solid 2px;
+}
+
+.nombres{
+    border: blueviolet solid 2px;
 }

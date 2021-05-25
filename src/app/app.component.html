@@ -1,21 +1,111 @@
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 <div class="titulo">
   <h1>Maquina expendedora</h1>
 </div>
-<br>
 <div class="contenido">
   <div class="productos">
     <div class="chocolatina">
-      <img src="" width="40%" height="40%">
-      <h3>Chocolatina JET con Leche x 12g </h3>
-      <p>10001</p>
-      <p>Precio: 1200</p>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Chocolatina JET x 12gr</mat-card-title>
+          <mat-card-subtitle>{{codigosProductos[0]}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://github.com/jucalderon10/Maquina-expendedora/blob/main/src/app/imagenes/Chocolatina%20Jet%20x%2012g-1000x798.jpg?raw=true" alt="Photo of chocolatina" width="50px" height="220px">
+        <mat-card-content>
+          <h2>${{ precios[0] }}</h2>
+          <label>Unidades disponibles: {{productosDisponibles[0]}}</label>
+        </mat-card-content>
+      </mat-card>
     </div>
-    <div class="coca">Coca cola</div>
-    <div class="mani">Mani</div>
-    <div class="margarita">Margarita</div>
+    <div class="coca">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Coca Cola x 250ml</mat-card-title>
+          <mat-card-subtitle>{{codigosProductos[1]}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://github.com/jucalderon10/Maquina-expendedora/blob/main/src/app/imagenes/cocacola-250.jpg?raw=true" alt="Photo of CocaCola" width="20px" height="220px">
+        <mat-card-content>
+          <h2>${{precios[1]}}</h2>
+          <label>Unidades disponibles: {{productosDisponibles[1]}}</label>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="mani">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Maní moto natural x 150gr</mat-card-title>
+          <mat-card-subtitle>{{codigosProductos[2]}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://github.com/jucalderon10/Maquina-expendedora/blob/main/src/app/imagenes/Mani.jpg?raw=true" alt="Photo of mani" width="20px" height="220px">
+        <mat-card-content>
+          <h2>${{precios[2]}}</h2>
+          <label>Unidades disponibles: {{productosDisponibles[2]}}</label>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="margarita">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Papas Margarita natural x 150gr</mat-card-title>
+          <mat-card-subtitle>{{codigosProductos[3]}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://github.com/jucalderon10/Maquina-expendedora/blob/main/src/app/imagenes/papas.png?raw=true" alt="Photo of papitas" width="20px" height="220px">
+        <mat-card-content>
+          <h2>${{precios[3]}}</h2>
+          <label>Unidades disponibles: {{productosDisponibles[3]}}</label>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
   
   <div class="digitos">
-    espacio digitos
+    <div class="operaciones">
+      <label for="">Ingresa tu dinero</label>
+      <div class="p-col-12 p-md-4">
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon">$</span>
+            <input type="number" pInputText placeholder="Price" [(ngModel)]="dinero">   
+            <span class="p-inputgroup-addon">.00</span>      
+        </div>
+      </div>
+      <br>
+      <div class="cargaDinero">
+        <label>Tu dinero cargado es: </label>
+        <label>{{ dinero }}</label>
+      </div>
+      <br>
+      <div class="inputCodigo">
+        <label for="">Ingresa el codigo del producto</label>
+        <br>
+        <input type="number" min="10001" max="10004" pInputText [(ngModel)]="codigo"> 
+      </div>
+      <br>
+      <div class="boton">
+        <button mat-raised-button color="primary" (click)="funcionamiento()">Comprar</button>
+      </div>
+      <br>
+      <div class="mensaje">
+        <label>{{ mensaje }}</label>
+      </div>
+      <br>
+      <div class="cambioDinero">
+        <label>Tu cambio es: </label>
+        <label>{{ cambio }}</label>
+      </div>
+    </div>
+    <br>
+    <div class="nombres">
+      <label>Elaborado por: </label>
+      <br>
+      
+      <p>Julieth Valentina Calderon Barrera</p>
+      
+      <p>Jhon Jairo Ballen Agudelo</p>
+      
+      <p>Miguel Angel García Perilla</p>
+      
+      <p>Joan Camilo Olmos Durán</p>
+      
+    </div>
   </div>  
 </div>
